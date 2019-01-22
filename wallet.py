@@ -17,6 +17,6 @@ class Wallet(object):
 
     def add_cash(self, amount):
         self.balance += amount
-        
+
     def some_method():
         print("some method to not be covered.")
