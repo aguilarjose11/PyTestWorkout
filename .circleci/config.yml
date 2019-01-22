@@ -49,6 +49,8 @@ jobs:
           command: |
             . venv/bin/activate
             python -m pytest
+            flake8 --exclude=.\env --statistics
+
 
       - store_artifacts:
           path: test-reports
