@@ -25,14 +25,14 @@ Check out the './requirements.txt' for more info.
 * run flake.
 
 
-''' Shell
+''' shell
 
 python -m flake8 --exclude=.\venv --ignore=E501 --statistics
 '''
 
 * run pytest.
 
-''' Shell
+''' shell
 
 python -m pytest --cov={modules}, ...
 '''
