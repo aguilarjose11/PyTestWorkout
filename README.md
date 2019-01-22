@@ -24,14 +24,14 @@ Check out the './requirements.txt' for more info.
 
 * run flake.
 
-
-''' shell
+``` shell
 python -m flake8 --exclude=.\venv --ignore=E501 --statistics
-'''
+```
 
 * run pytest.
 
-''' shell
+``` shell
 python -m pytest --cov={modules}, ...
-'''
-> ''{modules}'' - to replace with tested modules. remove if unnecessary.
+```
+
+>' {modules}' - to replace with tested modules. remove if unnecessary.
