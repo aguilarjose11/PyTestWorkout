@@ -2,9 +2,11 @@
 
 # to run tests, run command pytest.
 
+
 import pytest
 # python code to test out.
 from wallet import Wallet, InsufficientAmount
+
 
 '''
 this is a decorator for pytest fixations to use code that is
@@ -12,10 +14,13 @@ repeated multiple times.
 the fixtures can be seen by running pytest --fixtures .
 they are useful for starting code at the begining, and they can return stuff!
 '''
+
+
 @pytest.fixture
 def empty_wallet():
     ''' returns an empty wallet.'''
     return Wallet()
+
 
 # same as above.
 @pytest.fixture
@@ -23,12 +28,15 @@ def wallet():
     ''' returns a wallet with $20 in it.'''
     return Wallet(20)
 
+
 '''
 This is a testing class.
 The class has to have Test at the begining of the class name.
 '''
+
+
 class Testwallet():
-    #Testing...
+    # Testing...
     def test_default_initial_amount(self, empty_wallet):
         assert empty_wallet.balance == 0
 
@@ -56,7 +64,6 @@ class Testwallet():
         (20, 2, 18),
         (127, 127, 0)
     ])
-
     # this tests if multiple transactions actually work.
     def test_transactions(self, empty_wallet, earned, spent, expected):
         empty_wallet.add_cash(earned)

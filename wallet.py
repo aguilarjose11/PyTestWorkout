@@ -1,5 +1,6 @@
 # wallet.py
 
+
 class InsufficientAmount(Exception):
     pass
 
