@@ -19,3 +19,18 @@ This repository contains code I wrote while learning pytest and CircleCI integra
 > venv
 
 Check out the './requirements.txt' for more info.
+
+# local build.
+
+* run flake.
+
+'''shell
+python -m flake8 --exclude=.\venv --ignore=E501 --statistics
+'''
+
+* run pytest.
+
+'''shell
+python -m pytest --cov={modules}, ...
+'''
+> ''{modules}'' - to replace with tested modules. remove if unnecessary.
