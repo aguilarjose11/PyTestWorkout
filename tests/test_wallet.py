@@ -60,5 +60,5 @@ class Testwallet():
     # this tests if multiple transactions actually work.
     def test_transactions(self, empty_wallet, earned, spent, expected):
         empty_wallet.add_cash(earned)
-        empty_wallet.spend_cash(spent - 1)
+        empty_wallet.spend_cash(spent)
         assert empty_wallet.balance == expected
