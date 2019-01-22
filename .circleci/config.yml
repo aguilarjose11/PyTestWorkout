@@ -8,7 +8,11 @@ jobs:
     docker:
       # specify the version you desire here
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
+<<<<<<< HEAD
       - image: circleci/python
+=======
+      - image: circleci/python:3.6.1
+>>>>>>> da486ece2771058ffcf2f68e2074b3844447bcb7
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -48,7 +52,11 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
+<<<<<<< HEAD
             python -m pytest
+=======
+            python manage.py test
+>>>>>>> da486ece2771058ffcf2f68e2074b3844447bcb7
 
       - store_artifacts:
           path: test-reports
